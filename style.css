@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --background-color: black;
+  --color-1: white;
+  --color-2: #817B6F;
+  --color-3: #676258;
+  --color-gold: #D3BB8A;
+  --color-green: #83CA16;
+  --color-green-2:#A2E435;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* elements styling start */
+
+body {
+  background-color: var(--background-color);
+  color: var(--color-1);
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+}
+
+svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: white;
+}
+
+/* elements styling end */
+
+
+/* utility classes styling start  */
+
+
+.animate {
+  color: #0E3C34;
+  max-width: 800px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.golden {
+    color: var(--color-gold);
+    font-weight: bold;
+}
+
+.green {
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+/* utility classes styling end  */
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.glass {
+  background: rgb(0 0 0 / 20%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(11.1px);
+}
+
+
+
+
+/* container styling start  */
+
+/* header styling start  */
+.header {
+  height: 9.125rem;
+  padding: 1.5rem;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 77;
+}
+
+.header img {
+  width: 6.25rem;
+  height: auto;
+}
+
+.logo {
+  gap: 1rem;
+  margin-left: 0.5rem;
+}
+
+.logo p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: instrument sans;
+  text-align: center;
+}
+
+.hamburger-icon  {
+  width: 1.5rem;
+  height: 1rem;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hamburger-1, .hamburger-2, .hamburger-3 {
+  display: inline-block;
+  height: 0.1rem;
+  width: 100%;
+  background-color: var(--color-1);
+  transition: all 200ms linear;
+
+}
+
+.none {
+  opacity: 0;
+}
+
+.cross {
+  transform: rotateZ(45deg);
+  transform-origin: center;
+}
+
+
+.cross::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: inherit;
+  background-color: inherit;
+  transform: rotateZ(-90deg);
+
+}
+
+/* header styling end  */
+
+/* hero styling start   */
+
+.hero {
+  background-color: orange;
+  height: 100vh;
+  background-image: url('./assets/hELmfVTjj2TlNxABaSBPhtlkHw.avif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  content: '';
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.586);
+  pointer-events: none;
+}
+
+.call-to-action {
+  z-index: 22;
+  color: var(--color-1);
+  position: relative;
+  padding-top: 9rem;
+  padding-left: 4.5rem;
+  font-family: mona sans;
+  width: 50%;
+}
+
+.call-to-action p:first-of-type {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border: 0.09rem solid #2F460E;
+  background-color:#2f460e69;
+  padding: 0.1rem 0.4rem;
+  border-radius: 1.5rem;
+  color: var(--color-green-2);
+  margin-bottom: 1rem;
+}
+
+.call-to-action h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.call-to-action p:nth-of-type(2) {
+  font-size: 1rem;
+  color: var(--color-2);
+  margin-bottom: 1.25rem;
+}
+
+.call-to-action a {
+  display: inline-block;
+  background-color: var(--color-1);
+  color: var(--background-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9rem;
+  font-weight: 500;
+}
+
+/* hero styling end   */
+
+/* animated text styling start  */
+
+.animated-text {
+  font-family: mona sans;
+
+  text-align: center;
+  height: 150vh;
+}
+
+.animate {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--color-1);
+  width: 42rem;
+}
+
+
+
+/* animated text styling end  */
+
+
+/* hooks styling start  */
+
+.hidden {
+  opacity: 0;
+  transition: all 800ms;
+  filter: blur(0.4rem);
+}
+
+.to-be-vertical {
+  transform: translateY(100%);
+}
+
+.show-vertical {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.to-be-horizontal {
+  transform: translateX(-100%);
+}
+
+.show-horizontal {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+
+
+.hooks {
+  padding:0 4.5rem 7rem 4.5rem;
+  font-family: mona sans;
+  gap: 6rem;
+}
+
+.hooks p {
+  color: var(--color-2);
+}
+
+.hooks .left {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10rem;
+  height: 18rem;
+  width: 50%;
+}
+
+
+
+.hooks .left h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+}
+
+.hooks .left h1:nth-child(2) {
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.hooks .left p {
+  font-size: 1rem;
+}
+
+.hooks .right {
+  flex-direction: column;
+}
+
+.hooks .right {
+  line-height: 3.2rem;
+  gap: 6rem;
+}
+
+.hook-item {
+  gap: 3rem ;
+}
+
+.hook-item h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.hook-item h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hook-item p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+/* hooks styling end  */
+
+/* carousel styling start  */
+
+.carousel {
+  margin-top: 7rem;
+  font-family: mona sans;
+  gap: 0.625rem;
+  flex-direction: column;
+}
+
+.carousel-heading {
+  flex-direction: column;
+  line-height: 3rem;
+}
+
+.carousel-heading h1:first-child {
+  font-weight: 500;
+  font-size: 2.9rem;
+
+}
+
+.carousel-heading h1:last-child{
+  font-weight: 700;
+  font-size: 2.9rem;
+ 
+}
+
+/* carousel styling end  */
+
+/* container styling end  */
