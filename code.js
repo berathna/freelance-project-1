@@ -56,11 +56,13 @@ const hamburger1 = document.querySelector('.hamburger-1');
 const hamburger2 = document.querySelector('.hamburger-2');
 const hamburger3 = document.querySelector('.hamburger-3');
 const hamburgerIcon = document.querySelector('.hamburger-icon');
+const menu = document.querySelector('.menu');
 
 hamburgerIcon.addEventListener('click',()=>{
   hamburger2.classList.toggle('cross');
   hamburger1.classList.toggle('none');
   hamburger3.classList.toggle('none');
+  menu.classList.toggle('show-menu');
 });
 
 
